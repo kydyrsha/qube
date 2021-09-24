@@ -29,7 +29,7 @@ section {
 
 .btn {
   width: 100%;
-  max-width: 150px;
+  max-width: 180px;
   text-align: center;
   padding: 0.5rem 1rem;
   color: #fff;
@@ -39,17 +39,43 @@ section {
   transition: 0.6s;
   opacity: 1;
   letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
 .btn:hover {
   background-color: #ba35f4;
   box-shadow: 0 10px 60px #39ce9a;
+  color:#fff;
+}
+
+.btn.delete:hover {
+  background-color: #d92623;
+  color:#fff;
+}
+
+.btn.edit:hover {
+  background-color: #eddb18;
+  color:#fff;
 }
 
 input:focus {
   outline: none;
   border-color: #ba35f4;
   box-shadow: 0 0 6px #ba35f4;
+}
+
+input {
+  padding: 0.75rem;
+  letter-spacing: 0.5px;
+  border-radius: 0.5rem;
+  transition: 0.6s;
+  border-width: 0;
+}
+
+input:hover {
+  outline: none;
+  border-color: #ba35f4;
+  box-shadow: 0 0 10px #ba35f4;
 }
 
 footer {
@@ -93,20 +119,6 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.login-box-wrapper .inputs-wrapper input {
-  padding: 0.75rem;
-  letter-spacing: 0.5px;
-  border-radius: 0.5rem;
-  transition: 0.6s;
-  border-width: 0;
-}
-
-.login-box-wrapper .inputs-wrapper input:hover {
-  outline: none;
-  border-color: #ba35f4;
-  box-shadow: 0 0 10px #ba35f4;
-}
-
 .login-box-wrapper .btn {
   display: inline-block;
   margin: 0 auto;
@@ -132,4 +144,94 @@ footer .contacts a img {
 
 footer .contacts a img:hover {
   opacity: 0.5;
+}
+
+/* admin */
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height:10vh;
+  border-bottom: 1px solid #39ce9a;
+}
+
+.admin-header a {
+  font-size: 1.25rem;
+  margin:0;
+  transition: 0.6s;
+  color:#fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.admin-header a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 10vh);
+  align-items: center;
+}
+
+.admin-panel .admin-menu {
+  width:15%;
+  padding:1.5rem;
+  border-right: 1px solid #39ce9a;
+}
+
+.admin-panel .admin-menu ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  text-align: center;
+}
+
+.admin-panel .admin-menu ul li a {
+  color:#fff;
+  text-decoration: none;
+  padding:1rem;
+  display: inline-block;
+  width:100%;
+  font-size: 1.5rem;
+  transition: 0.6s;
+}
+
+.admin-panel .admin-menu ul li a:hover {
+  opacity:0.7;
+}
+
+.admin-panel .admin-content {
+  width:80%;
+  color:#fff;
+}
+
+.admin-panel .admin-content .dashboard p {
+  text-align: justify;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.admin-panel .admin-content .questions .question {
+  width:100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.admin-panel .admin-content .questions .question input {
+  display: block;
+  margin-bottom: 1rem;
+  width:100%;
+  max-width: 50%;
+}
+
+.admin-panel .admin-content .questions .question .btns {
+  width:100%;
+  max-width:50%;
+  display: flex;
+  justify-content: space-between;
 }
